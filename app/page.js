@@ -21,41 +21,72 @@ export default function Home() {
   const [timeLeft, setTimeLeft] = useState("");
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
 
-      const distance = targetDate - now;
+  const fetchDonations = async () => {
 
-      if (distance < 0) {
-        setTimeLeft("Campaign Ended");
-        clearInterval(timer);
-        return;
+    try {
+
+      const response = await fetch("/api/donate");
+
+      const data = await response.json();
+
+      if (data.success) {
+
+        setCurrentAmount(data.total);
+
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    } catch (error) {
 
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-      );
+      console.log(error);
 
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-      );
+    }
+  };
 
-      const seconds = Math.floor(
-        (distance % (1000 * 60)) / 1000
-      );
+  fetchDonations();
 
-      setTimeLeft(
-        `${days}d ${hours}h ${minutes}m ${seconds}s`
-      );
+  const timer = setInterval(() => {
 
-    }, 1000);
+    const now = new Date().getTime();
 
-    return () => clearInterval(timer);
-  }, []);
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+
+      setTimeLeft("Campaign Ended");
+
+      clearInterval(timer);
+
+      return;
+    }
+
+    const days = Math.floor(
+      distance / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) /
+      (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+      (distance % (1000 * 60 * 60)) /
+      (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+      (distance % (1000 * 60)) / 1000
+    );
+
+    setTimeLeft(
+      `${days}d ${hours}h ${minutes}m ${seconds}s`
+    );
+
+  }, 1000);
+
+  return () => clearInterval(timer);
+
+}, []);
 
   const submitDonation = async (e) => {
     e.preventDefault();
