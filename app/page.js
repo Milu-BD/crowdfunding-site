@@ -109,10 +109,6 @@ export default function Home() {
 
       setMessage("Donation submitted successfully!");
 
-      setCurrentAmount(
-        currentAmount + Number(amount)
-      );
-
       setName("");
       setAmount("");
       setTrxId("");
