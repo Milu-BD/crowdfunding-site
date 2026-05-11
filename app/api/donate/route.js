@@ -1,25 +1,28 @@
-import { connectDB } from "../../../lib/mongodb";
-import Donation from "../../../models/Donation";
+import { NextResponse } from "next/server";
+import dbConnect from "@/lib/mongodb";
+import Donation from "@/models/Donation";
 
 export async function POST(req) {
-  await connectDB();
-  const body = await req.json();
+  try {
+    await dbConnect();
 
-  const donation = await Donation.create({
-    name: body.name,
-    amount: body.amount,
-    trxId: body.trxId
-  });
+    const body = await req.json();
 
-  return Response.json({ success: true });
-}
+    const donation = await Donation.create({
+      name: body.name,
+      amount: body.amount,
+      trxId: body.trxId,
+    });
 
-export async function GET() {
-  await connectDB();
+    return NextResponse.json({
+      success: true,
+      donation,
+    });
 
-  const donations = await Donation.find({ approved: true });
-
-  const total = donations.reduce((sum, d) => sum + d.amount, 0);
-
-  return Response.json({ total });
+  } catch (error) {
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+    });
+  }
 }
