@@ -18,7 +18,36 @@ export async function POST(req) {
       success: true,
       donation,
     });
+export async function GET() {
 
+  try {
+
+    await dbConnect();
+
+    const donations = await Donation.find({
+      approved: false,
+    });
+
+    const total = donations.reduce(
+      (sum, item) => sum + item.amount,
+      0
+    );
+
+    return NextResponse.json({
+      success: true,
+      total,
+      donations,
+    });
+
+  } catch (error) {
+
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+    });
+
+  }
+}
   } catch (error) {
     return NextResponse.json({
       success: false,
