@@ -3,8 +3,16 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
+
   const targetAmount = 50000;
-  const currentAmount = 12500;
+
+  const [currentAmount, setCurrentAmount] = useState(0);
+
+  const [name, setName] = useState("");
+  const [amount, setAmount] = useState("");
+  const [trxId, setTrxId] = useState("");
+
+  const [message, setMessage] = useState("");
 
   const percentage = (currentAmount / targetAmount) * 100;
 
@@ -15,6 +23,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date().getTime();
+
       const distance = targetDate - now;
 
       if (distance < 0) {
@@ -24,6 +33,7 @@ export default function Home() {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
       const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) /
         (1000 * 60 * 60)
@@ -41,20 +51,62 @@ export default function Home() {
       setTimeLeft(
         `${days}d ${hours}h ${minutes}m ${seconds}s`
       );
+
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
+  const submitDonation = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/donate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        amount: Number(amount),
+        trxId,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+
+      setMessage("Donation submitted successfully!");
+
+      setCurrentAmount(
+        currentAmount + Number(amount)
+      );
+
+      setName("");
+      setAmount("");
+      setTrxId("");
+
+    } else {
+
+      setMessage("Something went wrong.");
+
+    }
+  };
+
   const shareWebsite = async () => {
+
     if (navigator.share) {
+
       await navigator.share({
         title: "Crowdfunding Campaign",
         text: "Support our crowdfunding campaign!",
         url: window.location.href,
       });
+
     } else {
-      alert("Share option is not supported on this device.");
+
+      alert("Sharing not supported.");
+
     }
   };
 
@@ -67,12 +119,13 @@ export default function Home() {
         fontFamily: "Arial",
       }}
     >
+
       <h1 style={{ textAlign: "center" }}>
         Crowdfunding Campaign
       </h1>
 
       <p style={{ textAlign: "center" }}>
-        Help us reach our goal of 50,000 BDT
+        Help us reach ৳50,000
       </p>
 
       <div
@@ -109,33 +162,79 @@ export default function Home() {
           borderRadius: "10px",
         }}
       >
+
         <h2>Bank Payment Information</h2>
 
-        <p><strong>Bank Name:</strong> Dutch Bangla Bank</p>
+        <p><strong>Bank:</strong> Dutch Bangla Bank</p>
+
         <p><strong>Account Name:</strong> Your Name</p>
+
         <p><strong>Account Number:</strong> 1234567890</p>
 
-        <p style={{ marginTop: "15px", color: "red" }}>
-          After payment, contact us with transaction proof.
-        </p>
       </div>
 
-      <div
+      <form
+        onSubmit={submitDonation}
         style={{
           marginTop: "30px",
-          padding: "20px",
-          background: "#f5f5f5",
-          borderRadius: "10px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
         }}
       >
-        <h2>About Campaign Owner</h2>
 
-        <p>
-          This crowdfunding campaign is organized to support
-          an important social and educational initiative.
-          Your contribution will make a meaningful impact.
-        </p>
-      </div>
+        <h2>Submit Donation</h2>
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          style={{
+            padding: "12px",
+          }}
+        />
+
+        <input
+          type="number"
+          placeholder="Donation Amount"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          required
+          style={{
+            padding: "12px",
+          }}
+        />
+
+        <input
+          type="text"
+          placeholder="Transaction ID"
+          value={trxId}
+          onChange={(e) => setTrxId(e.target.value)}
+          required
+          style={{
+            padding: "12px",
+          }}
+        />
+
+        <button
+          type="submit"
+          style={{
+            padding: "12px",
+            background: "black",
+            color: "white",
+            border: "none",
+          }}
+        >
+          Submit Donation
+        </button>
+
+      </form>
+
+      <p style={{ marginTop: "15px", color: "green" }}>
+        {message}
+      </p>
 
       <div
         style={{
@@ -143,27 +242,35 @@ export default function Home() {
           textAlign: "center",
         }}
       >
+
         <h2>Campaign Ends In</h2>
 
         <h1>{timeLeft}</h1>
+
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "30px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "30px",
+        }}
+      >
+
         <button
           onClick={shareWebsite}
           style={{
             padding: "12px 20px",
-            fontSize: "16px",
             background: "black",
             color: "white",
             border: "none",
             borderRadius: "8px",
-            cursor: "pointer",
           }}
         >
           Share Campaign
         </button>
+
       </div>
+
     </div>
   );
 }
