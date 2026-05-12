@@ -3,6 +3,18 @@ import { useEffect, useState } from "react";
 
 export default function AdminPage() {
   const [donations, setDonations] = useState([]);
+  const [isAuthorized, setIsAuthorized] = useState(false); // New state for password
+
+  // 1. Password Check logic
+  useEffect(() => {
+    const password = prompt("Enter Admin Password:");
+    if (password === "1234") { // Change "1234" to your own secret password
+      setIsAuthorized(true);
+      fetchAll();
+    } else {
+      alert("Wrong password!");
+    }
+  }, []);
 
   const fetchAll = async () => {
     const res = await fetch("/api/admin");
@@ -10,16 +22,12 @@ export default function AdminPage() {
     if (data.success) setDonations(data.donations);
   };
 
-  useEffect(() => {
-    fetchAll();
-  }, []);
-
   const approve = async (id) => {
     await fetch("/api/admin", {
       method: "PATCH",
       body: JSON.stringify({ id }),
     });
-    fetchAll(); // Refresh list
+    fetchAll(); 
   };
 
   const remove = async (id) => {
@@ -28,10 +36,24 @@ export default function AdminPage() {
         method: "DELETE",
         body: JSON.stringify({ id }),
       });
-      fetchAll(); // Refresh list
+      fetchAll();
     }
   };
 
+  // 2. Access Denied View
+  if (!isAuthorized) {
+    return (
+      <div style={{ padding: "50px", textAlign: "center", fontFamily: "Arial" }}>
+        <h1>🚫 Access Denied</h1>
+        <p>You must enter the correct password to view this page.</p>
+        <button onClick={() => window.location.reload()} style={{ padding: "10px", background: "black", color: "white" }}>
+          Try Again
+        </button>
+      </div>
+    );
+  }
+
+  // 3. The Actual Admin Table (only shows if isAuthorized is true)
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
       <h1>Admin Dashboard</h1>
@@ -68,4 +90,4 @@ export default function AdminPage() {
       </table>
     </div>
   );
-  }
+    }
