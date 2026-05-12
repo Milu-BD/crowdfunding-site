@@ -22,73 +22,74 @@ export default function Home() {
 
   useEffect(() => {
 
-  const fetchDonations = async () => {
+    const fetchDonations = async () => {
 
-    try {
+      try {
 
-      const response = await fetch("/api/donate");
+        const response = await fetch("/api/donate");
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (data.success) {
+        if (data.success) {
 
-        setCurrentAmount(data.total);
+          setCurrentAmount(data.total);
+
+        }
+
+      } catch (error) {
+
+        console.log(error);
 
       }
+    };
 
-    } catch (error) {
+    fetchDonations();
 
-      console.log(error);
+    const timer = setInterval(() => {
 
-    }
-  };
+      const now = new Date().getTime();
 
-  fetchDonations();
+      const distance = targetDate - now;
 
-  const timer = setInterval(() => {
+      if (distance < 0) {
 
-    const now = new Date().getTime();
+        setTimeLeft("Campaign Ended");
 
-    const distance = targetDate - now;
+        clearInterval(timer);
 
-    if (distance < 0) {
+        return;
+      }
 
-      setTimeLeft("Campaign Ended");
+      const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+      );
 
-      clearInterval(timer);
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+      );
 
-      return;
-    }
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+      );
 
-    const days = Math.floor(
-      distance / (1000 * 60 * 60 * 24)
-    );
+      const seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+      );
 
-    const hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) /
-      (1000 * 60 * 60)
-    );
+      setTimeLeft(
+        `${days}d ${hours}h ${minutes}m ${seconds}s`
+      );
 
-    const minutes = Math.floor(
-      (distance % (1000 * 60 * 60)) /
-      (1000 * 60)
-    );
+    }, 1000);
 
-    const seconds = Math.floor(
-      (distance % (1000 * 60)) / 1000
-    );
+    return () => clearInterval(timer);
 
-    setTimeLeft(
-      `${days}d ${hours}h ${minutes}m ${seconds}s`
-    );
-
-  }, 1000);
-
-  return () => clearInterval(timer);
-
-}, []);
+  }, []);
 
   const submitDonation = async (e) => {
+
     e.preventDefault();
 
     const response = await fetch("/api/donate", {
@@ -107,21 +108,17 @@ export default function Home() {
 
     if (data.success) {
 
-  setMessage("Donation submitted successfully!");
+      setMessage("Donation submitted successfully!");
 
-  const updated = await fetch("/api/donate");
+      const updated = await fetch("/api/donate");
 
-  const updatedData = await updated.json();
+      const updatedData = await updated.json();
 
-  setCurrentAmount(updatedData.total);
+      setCurrentAmount(updatedData.total);
 
-  setName("");
-
-  setAmount("");
-
-  setTrxId("");
-
-}
+      setName("");
+      setAmount("");
+      setTrxId("");
 
     } else {
 
@@ -310,4 +307,4 @@ export default function Home() {
 
     </div>
   );
-}
+            }
