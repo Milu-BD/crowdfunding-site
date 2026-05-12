@@ -8,7 +8,7 @@ export default function AdminPage() {
   // 1. Password Check logic
   useEffect(() => {
     const password = prompt("Enter Admin Password:");
-    if (password === "1234") { // Change "1234" to your own secret password
+    if (password === "KUWF@2026") { // Change "1234" to your own secret password
       setIsAuthorized(true);
       fetchAll();
     } else {
