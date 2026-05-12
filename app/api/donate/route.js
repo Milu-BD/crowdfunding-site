@@ -37,7 +37,7 @@ export async function GET() {
 
     await dbConnect();
 
-    const donations = await Donation.find();
+    const donations = await Donation.find({ approved: true });
 
     const total = donations.reduce(
       (sum, item) => sum + item.amount,
