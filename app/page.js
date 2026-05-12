@@ -107,11 +107,21 @@ export default function Home() {
 
     if (data.success) {
 
-      setMessage("Donation submitted successfully!");
+  setMessage("Donation submitted successfully!");
 
-      setName("");
-      setAmount("");
-      setTrxId("");
+  const updated = await fetch("/api/donate");
+
+  const updatedData = await updated.json();
+
+  setCurrentAmount(updatedData.total);
+
+  setName("");
+
+  setAmount("");
+
+  setTrxId("");
+
+}
 
     } else {
 
