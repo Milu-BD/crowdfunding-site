@@ -56,7 +56,7 @@ export default function AdminPage() {
   // 3. The Actual Admin Table (only shows if isAuthorized is true)
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Admin Dashboard</h1>
+      <h1>My Secure Admin</h1>
       <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
           <tr style={{ background: "#eee" }}>
