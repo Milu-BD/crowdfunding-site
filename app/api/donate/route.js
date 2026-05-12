@@ -3,7 +3,9 @@ import dbConnect from "@/lib/mongodb";
 import Donation from "@/models/Donation";
 
 export async function POST(req) {
+
   try {
+
     await dbConnect();
 
     const body = await req.json();
@@ -18,15 +20,24 @@ export async function POST(req) {
       success: true,
       donation,
     });
+
+  } catch (error) {
+
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+    });
+
+  }
+}
+
 export async function GET() {
 
   try {
 
     await dbConnect();
 
-    const donations = await Donation.find({
-      approved: false,
-    });
+    const donations = await Donation.find();
 
     const total = donations.reduce(
       (sum, item) => sum + item.amount,
@@ -46,12 +57,5 @@ export async function GET() {
       error: error.message,
     });
 
-  }
-}
-  } catch (error) {
-    return NextResponse.json({
-      success: false,
-      error: error.message,
-    });
   }
 }
