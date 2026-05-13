@@ -303,11 +303,50 @@ export default function Home() {
       </div>
 
       <div
-        style={{
-          textAlign: "center",
-          marginTop: "30px",
-        }}
-      >
+  style={{
+    marginTop: "40px",
+    padding: "20px",
+    border: "1px solid #ccc",
+    borderRadius: "10px",
+    background: "#f9f9f9",
+  }}
+>
+
+  <h2 style={{ textAlign: "center" }}>
+    Contact Information
+  </h2>
+
+  <p>
+    <strong>Address:</strong><br />
+    Main Branch: Boro Dewra, Tongi, Gazipur
+  </p>
+
+  <p>
+    <strong>Phone:</strong><br />
+    +8801785061618
+  </p>
+
+  <p>
+    <strong>Email:</strong><br />
+    khidmatulummah522@gmail.com
+  </p>
+
+  <p>
+    <strong>Facebook Page:</strong><br />
+    <a
+      href="https://www.facebook.com/profile.php?id=61550894840553"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: "blue",
+        wordBreak: "break-word",
+      }}
+    >
+      Visit Our Facebook Page
+    </a>
+  </p>
+
+</div>
 
         <button
           onClick={shareWebsite}
