@@ -74,6 +74,14 @@ export default function AdminPage() {
               <td>{d.name}</td>
               <td>৳{d.amount}</td>
               <td><code>{d.trxId}</code></td>
+
+<td>
+  {new Date(d.createdAt).toLocaleString()}
+</td>
+
+<td>
+  {d.approved ? "✅ Approved" : "⏳ Pending"}
+</td>
               <td>{d.approved ? "✅ Approved" : "⏳ Pending"}</td>
               <td>
                 {!d.approved && (
