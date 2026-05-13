@@ -157,14 +157,14 @@ export default function Home() {
       <h1 style={{ textAlign: "center" }}>
   Khidmatul Ummah Welfare Foundation
   <br />
-  <span style={{ color: "red" }}>
+  <span style={{ color: "blue" }}>
     Crowdfunding Campaign
   </span>
 </h1>
       <p
   style={{
     textAlign: "center",
-    color: "skyblue",
+    color: "red",
     fontWeight: "bold",
   }}
 >
