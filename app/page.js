@@ -157,7 +157,7 @@ export default function Home() {
   Khidmatul Ummah Welfare Foundation
   <br />
   <span style={{ color: "blue" }}>
-    Crowdfunding Campaign for Qurbani Project
+    Crowdfunding Campaign (Qurbani)
   </span>
 </h1>
       <p
