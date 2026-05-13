@@ -155,9 +155,12 @@ export default function Home() {
     >
 
       <h1 style={{ textAlign: "center" }}>
-        Crowdfunding Campaign
-      </h1>
-
+  Khidmatul Ummah Welfare Foundation
+  <br />
+  <span style={{ color: "red" }}>
+    Crowdfunding Campaign
+  </span>
+</h1>
       <p style={{ textAlign: "center" }}>
         Help us reach ৳50,000
       </p>
