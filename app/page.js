@@ -303,50 +303,57 @@ export default function Home() {
       </div>
 
       <div
-  style={{
-    marginTop: "40px",
-    padding: "20px",
-    border: "1px solid #ccc",
-    borderRadius: "10px",
-    background: "#f9f9f9",
-  }}
->
+        style={{
+          marginTop: "40px",
+          padding: "20px",
+          border: "1px solid #ccc",
+          borderRadius: "10px",
+          background: "#f9f9f9",
+        }}
+      >
 
-  <h2 style={{ textAlign: "center" }}>
-    Contact Information
-  </h2>
+        <h2 style={{ textAlign: "center" }}>
+          Contact Information
+        </h2>
 
-  <p>
-    <strong>Address:</strong><br />
-    Main Branch: Boro Dewra, Tongi, Gazipur
-  </p>
+        <p>
+          <strong>Address:</strong><br />
+          Main Branch: Boro Dewra, Tongi, Gazipur
+        </p>
 
-  <p>
-    <strong>Phone:</strong><br />
-    +8801785061618
-  </p>
+        <p>
+          <strong>Phone:</strong><br />
+          +8801785061618
+        </p>
 
-  <p>
-    <strong>Email:</strong><br />
-    khidmatulummah522@gmail.com
-  </p>
+        <p>
+          <strong>Email:</strong><br />
+          khidmatulummah522@gmail.com
+        </p>
 
-  <p>
-    <strong>Facebook Page:</strong><br />
-    <a
-      href="https://www.facebook.com/profile.php?id=61550894840553"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{
-        color: "blue",
-        wordBreak: "break-word",
-      }}
-    >
-      Visit Our Facebook Page
-    </a>
-  </p>
+        <p>
+          <strong>Facebook Page:</strong><br />
+          <a
+            href="https://www.facebook.com/profile.php?id=61550894840553"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "blue",
+              wordBreak: "break-word",
+            }}
+          >
+            Visit Our Facebook Page
+          </a>
+        </p>
 
-</div>
+      </div>
+
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "30px",
+        }}
+      >
 
         <button
           onClick={shareWebsite}
@@ -361,6 +368,11 @@ export default function Home() {
           Share Campaign
         </button>
 
+      </div>
+
+    </div>
+  );
+}
       </div>
 
     </div>
