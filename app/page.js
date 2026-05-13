@@ -16,7 +16,7 @@ export default function Home() {
 
   const percentage = (currentAmount / targetAmount) * 100;
 
-  const targetDate = new Date("2026-12-31T23:59:59").getTime();
+  const targetDate = new Date("2026-05-26T23:59:59").getTime();
 
   const [timeLeft, setTimeLeft] = useState("");
 
