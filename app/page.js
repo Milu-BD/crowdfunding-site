@@ -153,6 +153,33 @@ export default function Home() {
       }}
     >
 
+      <div
+  style={{
+    textAlign: "center",
+    marginBottom: "20px",
+  }}
+>
+
+  <h2
+    style={{
+      color: "green",
+      marginBottom: "10px",
+    }}
+  >
+    Assalamu Alaikum Wa Rahmatullahi Wa Barakatuh
+  </h2>
+
+  <p
+    style={{
+      color: "darkred",
+      fontWeight: "bold",
+      fontSize: "18px",
+    }}
+  >
+    🌙 Eid-ul-Adha Mubarak 🌙
+  </p>
+
+</div>
       <h1 style={{ textAlign: "center" }}>
   Khidmatul Ummah Welfare Foundation
   <br />
