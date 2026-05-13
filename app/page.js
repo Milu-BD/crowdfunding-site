@@ -132,10 +132,9 @@ export default function Home() {
     if (navigator.share) {
 
       await navigator.share({
-        title: "Crowdfunding Campaign",
-        text: "Support our crowdfunding campaign!",
-        url: window.location.href,
-      });
+  title: "Khidmatul Ummah Welfare Foundation Crowdfunding Campaign",
+  url: "https://milu-bd-crowdfunding-site.vercel.app/",
+});
 
     } else {
 
