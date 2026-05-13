@@ -59,13 +59,14 @@ export default function AdminPage() {
       <h1>My Secure Admin</h1>
       <table border="1" cellPadding="10" style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
-          <tr style={{ background: "#eee" }}>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>TrxID</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
+        <tr style={{ background: "#eee" }}>
+  <th>Name</th>
+  <th>Amount</th>
+  <th>TrxID</th>
+  <th>Submitted</th>
+  <th>Status</th>
+  <th>Actions</th>
+</tr>
         </thead>
         <tbody>
           {donations.map((d) => (
