@@ -263,7 +263,7 @@ export default function Home() {
 
         <input
           type="text"
-          placeholder="Transaction ID"
+          placeholder="Transaction ID (Example: DE49SKH8E7)"
           value={trxId}
           onChange={(e) => setTrxId(e.target.value)}
           required
