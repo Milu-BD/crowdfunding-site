@@ -161,9 +161,15 @@ export default function Home() {
     Crowdfunding Campaign
   </span>
 </h1>
-      <p style={{ textAlign: "center" }}>
-        Help us reach ৳50,000
-      </p>
+      <p
+  style={{
+    textAlign: "center",
+    color: "skyblue",
+    fontWeight: "bold",
+  }}
+>
+  Help us reach our target ৳50,000
+</p>
 
       <div
         style={{
@@ -202,11 +208,11 @@ export default function Home() {
 
         <h2>Bank Payment Information</h2>
 
-        <p><strong>Bank:</strong> Dutch Bangla Bank</p>
+        <p><strong>Payment Method:</strong> Bkash/Nagad</p>
 
-        <p><strong>Account Name:</strong> Your Name</p>
+        <p><strong>Account Name:</strong> MOAJ BILLAH NAJIF</p>
 
-        <p><strong>Account Number:</strong> 1234567890</p>
+        <p><strong>Number:</strong> 01745016118</p>
 
       </div>
 
