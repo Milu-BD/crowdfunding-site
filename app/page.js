@@ -226,7 +226,18 @@ export default function Home() {
         }}
       >
 
-        <h2>Submit Donation</h2>
+        <h2>Submit Payment Information</h2>
+
+<p
+  style={{
+    color: "gray",
+    marginTop: "-5px",
+    marginBottom: "10px",
+    fontSize: "14px",
+  }}
+>
+  Your payment information will be reviewed before updating the crowdfunding progress.
+</p>
 
         <input
           type="text"
