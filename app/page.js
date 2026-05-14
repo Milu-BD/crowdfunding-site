@@ -156,21 +156,26 @@ export default function Home() {
 >
 
   <div
-    style={{
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      width: "350px",
-      height: "350px",
-      backgroundImage: "url('/logo.png')",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      backgroundSize: "contain",
-      opacity: 0.07,
-      zIndex: 0,
-    }}
-  />
+  style={{
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+
+    width: "350px",
+    height: "350px",
+
+    backgroundImage: "url('/logo.png')",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+
+    opacity: 0.06,
+
+    zIndex: 0,
+    pointerEvents: "none",
+  }}
+/>
 
   <div style={{ position: "relative", zIndex: 1 }}>
       <div
