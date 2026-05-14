@@ -146,20 +146,33 @@ export default function Home() {
   return (
     <div
   style={{
+    position: "relative",
     maxWidth: "700px",
     margin: "auto",
     padding: "20px",
     fontFamily: "Arial",
-
-    backgroundImage: "url('/logo.png')",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "300px",
-    backgroundAttachment: "fixed",
-
-    backgroundColor: "rgba(255,255,255,0.95)",
+    overflow: "hidden",
   }}
 >
+
+  <div
+    style={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "350px",
+      height: "350px",
+      backgroundImage: "url('/logo.png')",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "contain",
+      opacity: 0.07,
+      zIndex: 0,
+    }}
+  />
+
+  <div style={{ position: "relative", zIndex: 1 }}>
       <div
   style={{
     textAlign: "center",
