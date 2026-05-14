@@ -145,14 +145,21 @@ export default function Home() {
 
   return (
     <div
-      style={{
-        maxWidth: "700px",
-        margin: "auto",
-        padding: "20px",
-        fontFamily: "Arial",
-      }}
-    >
+  style={{
+    maxWidth: "700px",
+    margin: "auto",
+    padding: "20px",
+    fontFamily: "Arial",
 
+    backgroundImage: "url('/logo.png')",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "300px",
+    backgroundAttachment: "fixed",
+
+    backgroundColor: "rgba(255,255,255,0.95)",
+  }}
+>
       <div
   style={{
     textAlign: "center",
