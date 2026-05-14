@@ -170,7 +170,7 @@ export default function Home() {
     backgroundPosition: "center",
     backgroundSize: "contain",
 
-    opacity: 1.0,
+    opacity: 0.7,
 
     zIndex: 0,
     pointerEvents: "none",
