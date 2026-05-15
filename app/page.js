@@ -379,13 +379,13 @@ export default function Home() {
         }}
       >
 
-        <h2>Bank Payment Information</h2>
+        <h2>Bank Payment Information (ব্যাংক পেমেন্ট তথ্য)</h2>
 
-        <p><strong>Payment Method:</strong> Bkash/Nagad</p>
+        <p><strong>Payment Method (পেমেন্ট পদ্ধতি):</strong> Bkash/Nagad (বিকাশ/নগদ)</p>
 
-        <p><strong>Account Name:</strong> MOAJ BILLAH NAJIF</p>
+        <p><strong>Account Name (অ্যাকাউন্টের নাম):</strong> MOAJ BILLAH NAJIF</p>
 
-        <p><strong>Number:</strong> 01745016118</p>
+        <p><strong>Account Number (অ্যাকাউন্ট নম্বর):</strong> 01745016118</p>
 
       </div>
 
@@ -409,13 +409,13 @@ export default function Home() {
 
 <p
   style={{
-    color: "gray",
+    color: "red",
     marginTop: "-5px",
     marginBottom: "10px",
     fontSize: "14px",
   }}
 >
-  Your payment information will be reviewed before updating the crowdfunding progress.
+  Your payment information will be reviewed before updating the crowdfunding progress (ক্রাউডফান্ডিংয়ের অগ্রগতি আপডেট করার আগে আপনার পেমেন্টের তথ্য পর্যালোচনা করা হবে)
 </p>
 
         <input
