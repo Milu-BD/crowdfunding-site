@@ -504,12 +504,12 @@ export default function Home() {
 
         <p>
           <strong>Address (ঠিকানা):</strong><br />
-          Main Branch: Boro Dewra, Tongi, Gazipur
+          Central Branch (টemporary) / কেন্দ্রীয় কার্যালয়(অস্থায়ী): 2nd Floor, Baitul Mamur Jame Masjid, Boro Dewra, Tongi West, Gazipur / ২য় তলা, বাইতুল মামুর জামে মসজিদ, বড় দেওড়া, টঙ্গী পশ্চিম, গাজীপুর।
         </p>
 
         <p>
           <strong>Phone (ফোন):</strong><br />
-          +8801785061618
+          +8801785061618, +8801963886708
         </p>
 
         <p>
