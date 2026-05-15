@@ -417,7 +417,6 @@ export default function Home() {
 </p>
 
 <div
-<div
   style={{
     width: "100%",
     background: "#ddd",
