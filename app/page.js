@@ -190,7 +190,7 @@ export default function Home() {
 
   <div
     style={{
-      background: "red",
+      background: "yellow",
       color: "white",
       padding: "14px 24px",
       borderRadius: "12px",
