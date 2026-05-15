@@ -417,30 +417,59 @@ export default function Home() {
 </p>
 
 <div
+<div
   style={{
     width: "100%",
     background: "#ddd",
-    borderRadius: "10px",
+    borderRadius: "12px",
     overflow: "hidden",
     marginTop: "20px",
+    position: "relative",
+    height: "35px",
   }}
 >
   <div
     style={{
       width: `${percentage}%`,
       background: "green",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-end",
       color: "white",
-      padding: "10px",
-      textAlign: "center",
+      fontWeight: "bold",
+      paddingRight: "10px",
+      transition: "0.5s",
     }}
   >
-    {percentage.toFixed(1)}%
+    ৳{currentAmount}
+  </div>
+
+  <div
+    style={{
+      position: "absolute",
+      right: "10px",
+      top: "7px",
+      fontWeight: "bold",
+      color: "black",
+    }}
+  >
+    ৳{targetAmount}
   </div>
 </div>
 
-<h3 style={{ marginTop: "15px" }}>
-  Raised (সংগৃহীত): ৳{currentAmount} / ৳{targetAmount}
-</h3>
+<p
+  style={{
+    textAlign: "center",
+    marginTop: "10px",
+    fontWeight: "bold",
+    color: "#444",
+  }}
+>
+  Crowdfunding Progress
+  <br />
+  ক্রাউডফান্ডিং অগ্রগতি
+</p>
       <div
         style={{
           marginTop: "30px",
