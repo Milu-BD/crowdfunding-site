@@ -205,48 +205,6 @@ export default function Home() {
   </p>
 
 </div>
-      <h1 style={{ textAlign: "center" }}>
-  Khidmatul Ummah Welfare Foundation (খিদমতুল উম্মাহ ওয়েলফেয়ার ফাউন্ডেশন)
-  <br />
-  <span style={{ color: "blue" }}>
-    Crowdfunding Campaign of Qurbani (কুরবানি ক্রাউডফান্ডিং ক্যাম্পেইন)
-  </span>
-</h1>
-      <p
-  style={{
-    textAlign: "center",
-    color: "red",
-    fontWeight: "bold",
-  }}
->
-  Help us reach our target ৳50,000 (আমাদের লক্ষ্য ৫০,০০০ টাকায় পৌঁছাতে সাহায্য করুন)
-</p>
-
-      <div
-        style={{
-          width: "100%",
-          background: "#ddd",
-          borderRadius: "10px",
-          overflow: "hidden",
-          marginTop: "20px",
-        }}
-      >
-        <div
-          style={{
-            width: `${percentage}%`,
-            background: "green",
-            color: "white",
-            padding: "10px",
-            textAlign: "center",
-          }}
-        >
-          {percentage.toFixed(1)}%
-        </div>
-      </div>
-
-      <h3 style={{ marginTop: "15px" }}>
-        Raised (সংগৃহীত): ৳{currentAmount} / ৳{targetAmount}
-      </h3>
 <div
   style={{
     marginTop: "25px",
@@ -347,11 +305,11 @@ export default function Home() {
   </p>
 
   <h2 style={{ color: "brown" }}>
-    সংশ্লিষ্ট ব্যক্তিবর্গ
+    সংশ্লিষ্ট ব্যক্তিবর্গ কর্তৃক আমন্ত্রণ
   </h2>
 
   <p>
-    (চিঠির নিবেদক ও শুভেচ্ছান্তে)
+    (আমন্ত্রণের নিবেদক ও শুভেচ্ছান্তে)
   </p>
 
   <ul>
@@ -370,6 +328,48 @@ export default function Home() {
   </ul>
 
 </div>
+        <h1 style={{ textAlign: "center" }}>
+  Khidmatul Ummah Welfare Foundation (খিদমতুল উম্মাহ ওয়েলফেয়ার ফাউন্ডেশন)
+  <br />
+  <span style={{ color: "blue" }}>
+    Crowdfunding Campaign of Qurbani (কুরবানি ক্রাউডফান্ডিং ক্যাম্পেইন)
+  </span>
+</h1>
+      <p
+  style={{
+    textAlign: "center",
+    color: "red",
+    fontWeight: "bold",
+  }}
+>
+  Help us reach our target ৳50,000 (আমাদের লক্ষ্য ৫০,০০০ টাকায় পৌঁছাতে সাহায্য করুন)
+</p>
+
+      <div
+        style={{
+          width: "100%",
+          background: "#ddd",
+          borderRadius: "10px",
+          overflow: "hidden",
+          marginTop: "20px",
+        }}
+      >
+        <div
+          style={{
+            width: `${percentage}%`,
+            background: "green",
+            color: "white",
+            padding: "10px",
+            textAlign: "center",
+          }}
+        >
+          {percentage.toFixed(1)}%
+        </div>
+      </div>
+
+      <h3 style={{ marginTop: "15px" }}>
+        Raised (সংগৃহীত): ৳{currentAmount} / ৳{targetAmount}
+      </h3>
       <div
         style={{
           marginTop: "30px",
