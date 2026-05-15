@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Crowdfunding Site",
+  title: "Khidmatul Ummah Welfare Foundation-BD",
   description: "Donation Website",
 };
 
