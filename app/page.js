@@ -132,8 +132,8 @@ export default function Home() {
     if (navigator.share) {
 
       await navigator.share({
-  title: "Khidmatul Ummah Welfare Foundation Crowdfunding Campaign",
-  url: "https://milu-bd-crowdfunding-site.vercel.app/",
+  title: "Khidmatul Ummah Welfare Foundation",
+  url: "https://khidmatul-ummah-welfare-foundation.vercel.app/",
 });
 
     } else {
@@ -248,7 +248,7 @@ export default function Home() {
       color: "#444",
     }}
   >
-    (খিদমতুল উম্মাহ ওয়েলফেয়ার ফাউন্ডেশন)
+    (খিদমাতুল উম্মাহ ওয়েলফেয়ার ফাউন্ডেশন)
   </span>
 </h1>
 <div
