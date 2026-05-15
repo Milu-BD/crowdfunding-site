@@ -206,10 +206,10 @@ export default function Home() {
 
 </div>
       <h1 style={{ textAlign: "center" }}>
-  Khidmatul Ummah Welfare Foundation
+  Khidmatul Ummah Welfare Foundation (খিদমতুল উম্মাহ ওয়েলফেয়ার ফাউন্ডেশন)
   <br />
   <span style={{ color: "blue" }}>
-    Crowdfunding Campaign (Qurbani)
+    Crowdfunding Campaign of Qurbani (কুরবানি ক্রাউডফান্ডিং ক্যাম্পেইন)
   </span>
 </h1>
       <p
@@ -219,7 +219,7 @@ export default function Home() {
     fontWeight: "bold",
   }}
 >
-  Help us reach our target ৳50,000
+  Help us reach our target ৳50,000 (আমাদের লক্ষ্য ৫০,০০০ টাকায় পৌঁছাতে সাহায্য করুন)
 </p>
 
       <div
@@ -245,7 +245,7 @@ export default function Home() {
       </div>
 
       <h3 style={{ marginTop: "15px" }}>
-        Raised: ৳{currentAmount} / ৳{targetAmount}
+        Raised (সংগৃহীত): ৳{currentAmount} / ৳{targetAmount}
       </h3>
 
       <div
@@ -277,7 +277,13 @@ export default function Home() {
         }}
       >
 
-        <h2>Submit Payment Information</h2>
+        <h2>
+  Submit Payment Information
+  <br />
+  <span style={{ fontSize: "16px", color: "gray" }}>
+    (পেমেন্ট তথ্য জমা দিন)
+  </span>
+</h2>
 
 <p
   style={{
@@ -292,7 +298,7 @@ export default function Home() {
 
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder="Your Name (আপনার নাম)"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -303,7 +309,7 @@ export default function Home() {
 
         <input
           type="number"
-          placeholder="Donation Amount"
+          placeholder="Donation Amount (অনুদানের পরিমাণ)"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           required
@@ -314,7 +320,7 @@ export default function Home() {
 
         <input
           type="text"
-          placeholder="Transaction ID (Example: DE40SXH8E7)"
+          placeholder="Transaction ID (লেনদেন নম্বর) Example: DE40SXH8E7"
           value={trxId}
           onChange={(e) => setTrxId(e.target.value)}
           required
@@ -332,7 +338,7 @@ export default function Home() {
             border: "none",
           }}
         >
-          Submit Donation
+          Submit Donation (তথ্য জমা দিন)
         </button>
 
       </form>
@@ -348,7 +354,13 @@ export default function Home() {
         }}
       >
 
-        <h2>Campaign Ends In</h2>
+        <h2>
+  Campaign Ends In
+  <br />
+  <span style={{ fontSize: "16px", color: "gray" }}>
+    (ক্যাম্পেইন শেষ হতে বাকি)
+  </span>
+</h2>
 
         <h1>{timeLeft}</h1>
 
@@ -365,26 +377,26 @@ export default function Home() {
       >
 
         <h2 style={{ textAlign: "center" }}>
-          Contact Information
+          Contact Information (যোগাযোগ)
         </h2>
 
         <p>
-          <strong>Address:</strong><br />
+          <strong>Address (ঠিকানা):</strong><br />
           Main Branch: Boro Dewra, Tongi, Gazipur
         </p>
 
         <p>
-          <strong>Phone:</strong><br />
+          <strong>Phone (ফোন):</strong><br />
           +8801785061618
         </p>
 
         <p>
-          <strong>Email:</strong><br />
+          <strong>Email (ইমেইল):</strong><br />
           khidmatulummah522@gmail.com
         </p>
 
         <p>
-          <strong>Facebook Page:</strong><br />
+          <strong>Facebook Page (ফেসবুক পেজ):</strong><br />
           <a
             href="https://www.facebook.com/profile.php?id=61550894840553"
             target="_blank"
@@ -394,7 +406,7 @@ export default function Home() {
               wordBreak: "break-word",
             }}
           >
-            Visit Our Facebook Page
+            Visit Our Facebook Page (পেজ ভিজিট করুন)
           </a>
         </p>
 
