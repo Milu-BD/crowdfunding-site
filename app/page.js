@@ -178,6 +178,30 @@ export default function Home() {
 />
 
   <div style={{ position: "relative", zIndex: 1 }}>
+      <a
+  href="#qurbani-crowdfunding"
+  style={{
+    display: "block",
+    textAlign: "center",
+    textDecoration: "none",
+    marginBottom: "15px",
+  }}
+>
+
+  <div
+    style={{
+      color: "red",
+      fontWeight: "bold",
+      fontSize: "22px",
+      animation: "blink 1s infinite",
+    }}
+  >
+    Crowdfunding Going On...
+    <br />
+    ক্রাউডফান্ডিং চলমান...
+  </div>
+
+</a>
       <div
   style={{
     textAlign: "center",
@@ -341,6 +365,7 @@ export default function Home() {
 
 </div>
         <h2
+  id="qurbani-crowdfunding"
   style={{
     textAlign: "center",
     color: "blue",
