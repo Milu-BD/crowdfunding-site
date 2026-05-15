@@ -206,7 +206,9 @@ export default function Home() {
   >
     📢 Crowdfunding Going On...
     <br />
-    ক্রাউডফান্ডিং চলমান...
+    ক্রাউডফান্ডিং চলমান...📢
+      <br /> 
+      (Tap Here/এখানে চাপুন)
   </div>
 
 </a>
