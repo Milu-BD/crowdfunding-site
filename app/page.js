@@ -191,7 +191,7 @@ export default function Home() {
   <div
     style={{
       background: "yellow",
-      color: "white",
+      color: "black",
       padding: "14px 24px",
       borderRadius: "12px",
       textAlign: "center",
