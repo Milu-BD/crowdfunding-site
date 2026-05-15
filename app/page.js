@@ -181,22 +181,30 @@ export default function Home() {
       <a
   href="#qurbani-crowdfunding"
   style={{
-    display: "block",
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
     textDecoration: "none",
-    marginBottom: "15px",
+    marginBottom: "20px",
   }}
 >
 
   <div
     style={{
-      color: "red",
+      background: "red",
+      color: "white",
+      padding: "14px 24px",
+      borderRadius: "12px",
+      textAlign: "center",
       fontWeight: "bold",
-      fontSize: "22px",
+      fontSize: "20px",
       animation: "blink 1s infinite",
+      boxShadow: "0 0 15px rgba(255,0,0,0.5)",
+      cursor: "pointer",
+      maxWidth: "320px",
+      width: "100%",
     }}
   >
-    Crowdfunding Going On...
+    📢 Crowdfunding Going On...
     <br />
     ক্রাউডফান্ডিং চলমান...
   </div>
