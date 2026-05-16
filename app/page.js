@@ -472,9 +472,7 @@ const extraAmount =
 >
   <div>
   <div>
-    Raised (সংগৃহীত):
-<br />
-  ৳{currentAmount}
+    Raised (সংগৃহীত): ৳{currentAmount}
   </div>
 
   {extraAmount > 0 && (
@@ -492,9 +490,7 @@ const extraAmount =
 </div>
 
   <span>
-    Target (লক্ষ্য):
-    <br />
-      ৳{targetAmount}
+    Target (লক্ষ্য): ৳{targetAmount}
   </span>
 </div>
       <div
