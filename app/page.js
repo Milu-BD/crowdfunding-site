@@ -752,7 +752,7 @@ const extraAmount =
       width: "160px",
       height: "160px",
       objectFit: "contain",
-      marginTop: "15px",
+      marginTop: "5px",
       opacity: 0.9,
     }}
   />
