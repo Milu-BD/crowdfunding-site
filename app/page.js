@@ -471,6 +471,7 @@ const extraAmount =
         color: "green",
         fontSize: "16px",
         marginTop: "4px",
+        alignItems: "center",
       }}
     >
       ✨ +৳{extraAmount} Barakah Bonus
