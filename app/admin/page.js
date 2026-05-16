@@ -10,7 +10,7 @@ const [passwordInput, setPasswordInput] = useState(""); // New state for passwor
   // 1. Password Check logic
   const checkPassword = () => {
 
-  if (passwordInput === "milu&kuwf") {
+  if (passwordInput === "kuwf&ahm") {
 
     setIsAuthorized(true);
     fetchAll();
