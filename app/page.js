@@ -434,7 +434,7 @@ export default function Home() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "white",
+      color: "red",
       fontWeight: "bold",
       transition: "0.5s",
     }}
