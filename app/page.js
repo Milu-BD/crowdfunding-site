@@ -460,21 +460,23 @@ const extraAmount =
     color: "#444",
   }}
 >
-  <span>
+  <div>
+  <div>
     Raised: ৳{currentAmount}
+  </div>
 
-    {extraAmount > 0 && (
-      <span
-        style={{
-          color: "green",
-          marginLeft: "8px",
-          fontSize: "18px",
-        }}
-      >
-        ✨ +৳{extraAmount} Barakah Bonus
-      </span>
-    )}
-  </span>
+  {extraAmount > 0 && (
+    <div
+      style={{
+        color: "green",
+        fontSize: "16px",
+        marginTop: "4px",
+      }}
+    >
+      ✨ +৳{extraAmount} Barakah Bonus
+    </div>
+  )}
+</div>
 
   <span>
     Target: ৳{targetAmount}
