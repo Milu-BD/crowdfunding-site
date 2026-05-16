@@ -658,7 +658,7 @@ export default function Home() {
               wordBreak: "break-word",
             }}
           >
-            Visit Our Facebook Page (পেজ ভিজিট করুন)
+            Visit Our Facebook Page (আমাদের ফেসবুক পেজ ভিজিট করুন)
           </a>
         </p>
 
