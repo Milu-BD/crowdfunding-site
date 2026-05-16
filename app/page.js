@@ -607,15 +607,46 @@ export default function Home() {
         </p>
 
         <p>
-          <strong>Phone (ফোন):</strong><br />
-          +8801785061618, +8801963886708
-        </p>
+  <strong>Phone (ফোন):</strong><br />
+
+  <a
+    href="tel:+8801785061618"
+    style={{
+      color: "blue",
+      textDecoration: "none",
+    }}
+  >
+    +8801785061618
+  </a>
+
+  {" , "}
+
+  <a
+    href="tel:+8801963886708"
+    style={{
+      color: "blue",
+      textDecoration: "none",
+    }}
+  >
+    +8801963886708
+  </a>
+
+</p>
 
         <p>
-          <strong>Email (ইমেইল):</strong><br />
-          khidmatulummah522@gmail.com
-        </p>
+  <strong>Email (ইমেইল):</strong><br />
 
+  <a
+    href="mailto:khidmatulummah522@gmail.com"
+    style={{
+      color: "blue",
+      textDecoration: "none",
+    }}
+  >
+    khidmatulummah522@gmail.com
+  </a>
+
+</p>
         <p>
           <strong>Facebook Page (ফেসবুক পেজ):</strong><br />
           <a
