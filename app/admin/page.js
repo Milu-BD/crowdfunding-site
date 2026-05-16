@@ -48,7 +48,6 @@ const [passwordInput, setPasswordInput] = useState(""); // New state for passwor
 
   // 2. Access Denied View
   if (!isAuthorized) {
-  if (!isAuthorized) {
 
   return (
 
@@ -153,10 +152,6 @@ const [passwordInput, setPasswordInput] = useState(""); // New state for passwor
 
 <td>
   {new Date(d.createdAt).toLocaleString()}
-</td>
-
-<td>
-  {d.approved ? "✅ Approved" : "⏳ Pending"}
 </td>
               <td>{d.approved ? "✅ Approved" : "⏳ Pending"}</td>
               <td>
