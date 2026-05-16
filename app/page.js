@@ -721,11 +721,11 @@ const extraAmount =
 >
 
   <img
-    src="/logo.png"
+    src="/logo1.png"
     alt="Study Circle Logo"
     style={{
-      width: "80px",
-      height: "80px",
+      width: "100px",
+      height: "100px",
       objectFit: "contain",
       marginBottom: "10px",
       opacity: 0.9,
