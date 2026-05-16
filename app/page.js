@@ -116,7 +116,7 @@ const extraAmount =
 
     if (data.success) {
 
-      setMessage("Donation submitted successfully!");
+      setMessage("Donation submitted successfully (ALHAMDULILLAH)!");
 
       const updated = await fetch("/api/donate");
 
@@ -537,7 +537,7 @@ const extraAmount =
     fontSize: "14px",
   }}
 >
-  Your payment information will be reviewed before updating the crowdfunding progress (ক্রাউডফান্ডিংয়ের অগ্রগতি আপডেট করার আগে আপনার পেমেন্টের তথ্য পর্যালোচনা করা হবে)
+  Your payment information will be reviewed within one hr before updating the crowdfunding progress (ক্রাউডফান্ডিংয়ের অগ্রগতি আপডেট করার জন্য এক ঘণ্টার মধ্যে আপনার পেমেন্টের তথ্য পর্যালোচনা করা হবে)
 </p>
 
         <input
