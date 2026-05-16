@@ -705,7 +705,7 @@ const extraAmount =
             borderRadius: "8px",
           }}
         >
-          Share Campaign
+          Share Our Website
         </button>
 
       </div>
