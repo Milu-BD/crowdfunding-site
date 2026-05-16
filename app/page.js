@@ -720,18 +720,6 @@ const extraAmount =
   }}
 >
 
-  <img
-    src="/logo1.png"
-    alt="Study Circle Logo"
-    style={{
-      width: "100px",
-      height: "100px",
-      objectFit: "contain",
-      marginBottom: "10px",
-      opacity: 0.9,
-    }}
-  />
-
   <p
     style={{
       fontWeight: "bold",
@@ -756,6 +744,18 @@ const extraAmount =
       Khidmatul Ummah Welfare Foundation
     </span>
   </p>
+
+  <img
+    src="/logo1.png"
+    alt="Study Circle Logo"
+    style={{
+      width: "160px",
+      height: "160px",
+      objectFit: "contain",
+      marginTop: "15px",
+      opacity: 0.9,
+    }}
+  />
 
 </div>
 </div>
