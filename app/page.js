@@ -717,46 +717,11 @@ const extraAmount =
     borderTop: "1px solid #ccc",
     textAlign: "center",
     color: "#444",
+    fontWeight: "bold",
+    fontSize: "15px",
   }}
 >
-
-  <p
-    style={{
-      fontWeight: "bold",
-      lineHeight: "1.8",
-      fontSize: "16px",
-    }}
-  >
-    Developed by
-    <br />
-
-    <span style={{ color: "darkblue" }}>
-      Study Circle
-    </span>
-
-    <br />
-
-    of
-
-    <br />
-
-    <span style={{ color: "darkgreen" }}>
-      Khidmatul Ummah Welfare Foundation
-    </span>
-  </p>
-
-  <img
-    src="/logo1.png"
-    alt="Study Circle Logo"
-    style={{
-      width: "160px",
-      height: "160px",
-      objectFit: "contain",
-      marginTop: "5px",
-      opacity: 0.9,
-    }}
-  />
-
+  Developed by: Study Circle of Khidmatul Ummah Welfare Foundation
 </div>
 </div>
   );
