@@ -397,8 +397,6 @@ const extraAmount =
       আহ্বায়ক, কুরবানী প্রজেক্ট কমিটি
     </li>
   </ul>
-
-
 </div>
         <h2
   id="qurbani-crowdfunding"
@@ -422,6 +420,18 @@ const extraAmount =
   Help us reach our target ৳50,000
   <br />
   (আমাদের লক্ষ্য ৫০,০০০ টাকায় পৌঁছাতে সাহায্য করুন)
+</p>
+    <p
+  style={{
+    textAlign: "center",
+    marginTop: "10px",
+    fontWeight: "bold",
+    color: "#444",
+  }}
+>
+  Crowdfunding Progress
+  <br />
+  ক্রাউডফান্ডিং অগ্রগতি
 </p>
 <div
   style={{
@@ -462,7 +472,9 @@ const extraAmount =
 >
   <div>
   <div>
-    Raised (সংগৃহীত): ৳{currentAmount}
+    Raised (সংগৃহীত):
+<br />
+  ৳{currentAmount}
   </div>
 
   {extraAmount > 0 && (
@@ -480,22 +492,11 @@ const extraAmount =
 </div>
 
   <span>
-    Target (লক্ষ্য): ৳{targetAmount}
+    Target (লক্ষ্য):
+    <br />
+      ৳{targetAmount}
   </span>
 </div>
-
-<p
-  style={{
-    textAlign: "center",
-    marginTop: "10px",
-    fontWeight: "bold",
-    color: "#444",
-  }}
->
-  Crowdfunding Progress
-  <br />
-  ক্রাউডফান্ডিং অগ্রগতি
-</p>
       <div
         style={{
           marginTop: "30px",
