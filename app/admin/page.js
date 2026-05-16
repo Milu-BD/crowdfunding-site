@@ -3,18 +3,24 @@ import { useEffect, useState } from "react";
 
 export default function AdminPage() {
   const [donations, setDonations] = useState([]);
-  const [isAuthorized, setIsAuthorized] = useState(false); // New state for password
+  const [isAuthorized, setIsAuthorized] = useState(false);
+const [showPassword, setShowPassword] = useState(false);
+const [passwordInput, setPasswordInput] = useState(""); // New state for password
 
   // 1. Password Check logic
-  useEffect(() => {
-    const password = prompt("Enter Admin Password:");
-    if (password === "kuwf@2026") { // Change "1234" to your own secret password
-      setIsAuthorized(true);
-      fetchAll();
-    } else {
-      alert("Wrong password!");
-    }
-  }, []);
+  const checkPassword = () => {
+
+  if (passwordInput === "milu&kuwf") {
+
+    setIsAuthorized(true);
+    fetchAll();
+
+  } else {
+
+    alert("Wrong password!");
+
+  }
+};
 
   const fetchAll = async () => {
     const res = await fetch("/api/admin");
@@ -42,17 +48,87 @@ export default function AdminPage() {
 
   // 2. Access Denied View
   if (!isAuthorized) {
-    return (
-      <div style={{ padding: "50px", textAlign: "center", fontFamily: "Arial" }}>
-        <h1>🚫 Access Denied</h1>
-        <p>You must enter the correct password to view this page.</p>
-        <button onClick={() => window.location.reload()} style={{ padding: "10px", background: "black", color: "white" }}>
-          Try Again
-        </button>
-      </div>
-    );
-  }
+  if (!isAuthorized) {
 
+  return (
+
+    <div
+      style={{
+        padding: "50px",
+        textAlign: "center",
+        fontFamily: "Arial",
+        maxWidth: "400px",
+        margin: "auto",
+      }}
+    >
+
+      <h1>🔐 Admin Login</h1>
+
+      <input
+        type={showPassword ? "text" : "password"}
+        placeholder="Enter Admin Password"
+        value={passwordInput}
+        onChange={(e) =>
+          setPasswordInput(e.target.value)
+        }
+        style={{
+          padding: "12px",
+          width: "100%",
+          marginTop: "20px",
+          borderRadius: "8px",
+          border: "1px solid #ccc",
+        }}
+      />
+
+      <div
+        style={{
+          marginTop: "10px",
+          textAlign: "left",
+        }}
+      >
+
+        <label
+          style={{
+            cursor: "pointer",
+          }}
+        >
+
+          <input
+            type="checkbox"
+            checked={showPassword}
+            onChange={() =>
+              setShowPassword(!showPassword)
+            }
+            style={{
+              marginRight: "8px",
+            }}
+          />
+
+          Show Password
+
+        </label>
+
+      </div>
+
+      <button
+        onClick={checkPassword}
+        style={{
+          marginTop: "20px",
+          padding: "12px 20px",
+          background: "black",
+          color: "white",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+        }}
+      >
+        Login
+      </button>
+
+    </div>
+
+  );
+}
   // 3. The Actual Admin Table (only shows if isAuthorized is true)
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
