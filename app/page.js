@@ -14,7 +14,15 @@ export default function Home() {
 
   const [message, setMessage] = useState("");
 
-  const percentage = (currentAmount / targetAmount) * 100;
+  const percentage = Math.min(
+  (currentAmount / targetAmount) * 100,
+  100
+);
+
+const extraAmount =
+  currentAmount > targetAmount
+    ? currentAmount - targetAmount
+    : 0;
 
   const targetDate = new Date("2026-05-26T23:59:59").getTime();
 
@@ -452,9 +460,25 @@ export default function Home() {
     color: "#444",
   }}
 >
-  <span>Raised: ৳{currentAmount}</span>
+  <span>
+    Raised: ৳{currentAmount}
 
-  <span>Target: ৳{targetAmount}</span>
+    {extraAmount > 0 && (
+      <span
+        style={{
+          color: "green",
+          marginLeft: "8px",
+          fontSize: "18px",
+        }}
+      >
+        ✨ +৳{extraAmount} Barakah Bonus
+      </span>
+    )}
+  </span>
+
+  <span>
+    Target: ৳{targetAmount}
+  </span>
 </div>
 
 <p
