@@ -417,6 +417,7 @@ export default function Home() {
 </p>
 
 <div
+<div
   style={{
     width: "100%",
     background: "#ddd",
@@ -434,27 +435,28 @@ export default function Home() {
       height: "100%",
       display: "flex",
       alignItems: "center",
-      justifyContent: "flex-end",
+      justifyContent: "center",
       color: "white",
       fontWeight: "bold",
-      paddingRight: "10px",
       transition: "0.5s",
     }}
   >
-    ৳{currentAmount}
+    {percentage.toFixed(1)}%
   </div>
+</div>
 
-  <div
-    style={{
-      position: "absolute",
-      right: "10px",
-      top: "7px",
-      fontWeight: "bold",
-      color: "black",
-    }}
-  >
-    ৳{targetAmount}
-  </div>
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    marginTop: "8px",
+    fontWeight: "bold",
+    color: "#444",
+  }}
+>
+  <span>Raised: ৳{currentAmount}</span>
+
+  <span>Target: ৳{targetAmount}</span>
 </div>
 
 <p
