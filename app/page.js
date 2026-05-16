@@ -474,7 +474,7 @@ const extraAmount =
         alignItems: "center",
       }}
     >
-      ✨ +৳{extraAmount} Barakah Bonus
+      ✨ +৳{extraAmount} Bonus (Barakah, Subhanallah)
     </div>
   )}
 </div>
