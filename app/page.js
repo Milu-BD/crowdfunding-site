@@ -415,8 +415,6 @@ export default function Home() {
   <br />
   (আমাদের লক্ষ্য ৫০,০০০ টাকায় পৌঁছাতে সাহায্য করুন)
 </p>
-
-<div
 <div
   style={{
     width: "100%",
