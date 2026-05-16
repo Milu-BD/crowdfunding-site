@@ -478,7 +478,6 @@ const extraAmount =
   {extraAmount > 0 && (
     <div
       style={{
-        textAlign: "center",
         color: "green",
         fontSize: "16px",
         marginTop: "4px",
