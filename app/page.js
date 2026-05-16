@@ -710,7 +710,54 @@ const extraAmount =
       </div>
 
     </div>
+<div
+  style={{
+    marginTop: "50px",
+    paddingTop: "20px",
+    borderTop: "1px solid #ccc",
+    textAlign: "center",
+    color: "#444",
+  }}
+>
 
+  <img
+    src="/logo.png"
+    alt="Study Circle Logo"
+    style={{
+      width: "80px",
+      height: "80px",
+      objectFit: "contain",
+      marginBottom: "10px",
+      opacity: 0.9,
+    }}
+  />
+
+  <p
+    style={{
+      fontWeight: "bold",
+      lineHeight: "1.8",
+      fontSize: "16px",
+    }}
+  >
+    Developed by
+    <br />
+
+    <span style={{ color: "darkblue" }}>
+      Study Circle
+    </span>
+
+    <br />
+
+    of
+
+    <br />
+
+    <span style={{ color: "darkgreen" }}>
+      Khidmatul Ummah Welfare Foundation
+    </span>
+  </p>
+
+</div>
 </div>
   );
 }
